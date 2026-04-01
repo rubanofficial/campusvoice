@@ -1,5 +1,8 @@
 import Complaint from "../models/Complaint.model.js";
-import { performCompleteAnalysis } from "../utils/sentimentAnalysis.js";
+import {
+    analyzeComplaint,
+    FALLBACK_ANALYSIS,
+} from "../services/geminiService.js";
 
 // Generate unique complaint ID
 function generateComplaintId() {
@@ -12,10 +15,23 @@ function generateComplaintId() {
 // CREATE complaint (public)
 export const createComplaint = async (req, res) => {
     try {
-        // Perform AI analysis on the complaint text
-        const analysis = performCompleteAnalysis(
-            req.body.complaintText,
-            req.body.category
+        let analysis = { ...FALLBACK_ANALYSIS };
+        let analysisMeta = {
+            source: "fallback",
+            reason: "unknown",
+            confidence: 0.35,
+        };
+
+        try {
+            const aiResult = await analyzeComplaint(req.body.complaintText);
+            analysis = aiResult.analysis;
+            analysisMeta = aiResult.meta;
+        } catch (error) {
+            console.error("AI analysis error. Using fallback.", error);
+        }
+
+        console.info(
+            `[AI] source=${analysisMeta.source}, priority=${analysis.priority}, sentiment=${analysis.sentiment}`
         );
 
         const complaint = await Complaint.create({
@@ -23,20 +39,24 @@ export const createComplaint = async (req, res) => {
             complaintId: generateComplaintId(),
             status: "submitted",
             mlOutput: {
-                category: analysis.category,
+                category: req.body.category,
                 priority: analysis.priority,
                 sentiment: analysis.sentiment,
-                sentimentScore: analysis.sentimentScore,
                 keywords: analysis.keywords,
-                flags: analysis.flags,
-                confidence: analysis.confidence,
+                flags: {
+                    urgent: analysis.priority === "critical",
+                    safety: req.body.category === "safety",
+                    duplicate: false,
+                },
+                confidence: analysisMeta.confidence,
             },
         });
 
         res.status(201).json({
             success: true,
             complaintId: complaint.complaintId,
-            analysis: analysis,
+            analysis,
+            analysisMeta,
         });
     } catch (error) {
         console.error("Create complaint error:", error);

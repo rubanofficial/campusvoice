@@ -16,7 +16,7 @@ export function Header() {
           {/* Brand */}
           <Link to="/" className="group flex flex-col leading-tight">
             <span className="text-lg font-semibold tracking-tight group-hover:opacity-90 transition">
-              KEC Complaint Portal
+              CampusVoice
             </span>
             <span className="text-xs text-black">
               Secure & Confidential Reporting
