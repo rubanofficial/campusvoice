@@ -1,4 +1,5 @@
-const API_BASE = "http://localhost:5000/api/complaints";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE = `${API_BASE_URL}/complaints`;
 
 export const complaintService = {
   // Submit complaint

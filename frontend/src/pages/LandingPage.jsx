@@ -12,7 +12,7 @@
 //       {/* Hero Section - More Compact & Premium */}
 //       <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/5 py-12 md:py-16">
 //         <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
-        
+
 //         <div className="container mx-auto px-4 sm:px-6 relative">
 //           <div className="max-w-4xl mx-auto">
 //             {/* Trust Badge */}
@@ -27,7 +27,7 @@
 //               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
 //                 CampusVoice
 //               </h1>
-              
+
 //               <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
 //                 Submit complaints securely with complete confidentiality. Choose anonymous or identified submissions.
 //                 <span className="inline-block mt-1 text-foreground font-semibold"> No login required.</span>
@@ -86,7 +86,7 @@
 //             {/* Anonymous Card - Enhanced */}
 //             <Card className="relative overflow-hidden border-2 hover:border-accent/50 transition-all duration-300 hover:shadow-xl group">
 //               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full" />
-              
+
 //               <CardHeader className="pb-3">
 //                 <div className="flex items-start justify-between">
 //                   <div className="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -101,7 +101,7 @@
 //                   Complete privacy, no personal details required
 //                 </CardDescription>
 //               </CardHeader>
-              
+
 //               <CardContent className="space-y-4">
 //                 <div className="space-y-2">
 //                   <div className="flex items-start gap-2 text-xs">
@@ -134,7 +134,7 @@
 //             {/* Identified Card - Enhanced */}
 //             <Card className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
 //               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
-              
+
 //               <CardHeader className="pb-3">
 //                 <div className="flex items-start justify-between">
 //                   <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -149,7 +149,7 @@
 //                   Faster resolution with direct communication
 //                 </CardDescription>
 //               </CardHeader>
-              
+
 //               <CardContent className="space-y-4">
 //                 <div className="space-y-2">
 //                   <div className="flex items-start gap-2 text-xs">
@@ -292,7 +292,7 @@ export default function LandingPage() {
       {/* Hero Section - More Compact & Premium */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/5 py-12 md:py-16">
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(white,transparent_85%)]" />
-        
+
         <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="max-w-4xl mx-auto">
             {/* Trust Badge */}
@@ -303,58 +303,58 @@ export default function LandingPage() {
               </div>
             </div>
 
-           <div className="text-center space-y-3">
-  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
-    CampusVoice
-  </h1>
-  
-  <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-snug px-4">
-    Submit complaints securely with complete confidentiality. Choose anonymous or identified submissions.{" "}
-    <span className="text-foreground font-semibold">No login required.</span>
-  </p>
+            <div className="text-center space-y-3">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
+                CampusVoice
+              </h1>
 
-  <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-3">
-    <Button 
-      size="lg" 
-      className="w-full sm:w-auto gap-2 shadow-lg hover:shadow-xl transition-all px-8 py-6 text-base"
-      onClick={scrollToSubmissionOptions}
-    >
-      <FileText className="h-5 w-5" />
-      Submit Complaint
-    </Button>
-    <Link to="/track" className="w-full sm:w-auto">
-      <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2 border-2 hover:bg-accent/5 px-8 py-6 text-base">
-        <Search className="h-5 w-5" />
-        Track Status
-      </Button>
-    </Link>
-  </div>
-</div>
-{/* Stats Bar */}
-<div className="container mx-auto px-4 sm:px-6 mt-12">
-  <div className="max-w-5xl mx-auto">
-    <div className="grid grid-cols-3 gap-6 md:gap-8 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 md:p-8 shadow-sm">
-      <div className="text-center">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">48hrs</div>
-        <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Review Time</div>
-      </div>
-      <div className="text-center border-x border-border/50">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">100%</div>
-        <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Confidential</div>
-      </div>
-      <div className="text-center">
-        <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">24/7</div>
-        <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Available</div>
-      </div>
-    </div>
-  </div>
-</div>
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-snug px-4">
+                Submit complaints securely with complete confidentiality. Choose anonymous or identified submissions.{" "}
+                <span className="text-foreground font-semibold">No login required.</span>
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 pt-3">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto gap-2 shadow-lg hover:shadow-xl transition-all px-8 py-6 text-base"
+                  onClick={scrollToSubmissionOptions}
+                >
+                  <FileText className="h-5 w-5" />
+                  Submit Complaint
+                </Button>
+                <Link to="/track" className="w-full sm:w-auto">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto gap-2 border-2 hover:bg-accent/5 px-8 py-6 text-base">
+                    <Search className="h-5 w-5" />
+                    Track Status
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            {/* Stats Bar */}
+            <div className="container mx-auto px-4 sm:px-6 mt-12">
+              <div className="max-w-5xl mx-auto">
+                <div className="grid grid-cols-3 gap-6 md:gap-8 bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 md:p-8 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">48hrs</div>
+                    <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Review Time</div>
+                  </div>
+                  <div className="text-center border-x border-border/50">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">100%</div>
+                    <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Confidential</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">24/7</div>
+                    <div className="text-xs md:text-sm text-muted-foreground font-medium mt-1">Available</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Stats Bar */}
-        
-      
+
+
       </section>
 
       {/* Submission Options - Tighter & More Professional */}
@@ -371,7 +371,7 @@ export default function LandingPage() {
             {/* Anonymous Card - Enhanced */}
             <Card className="relative overflow-hidden border-2 hover:border-accent/50 transition-all duration-300 hover:shadow-xl group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full" />
-              
+
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between">
                   <div className="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -386,7 +386,7 @@ export default function LandingPage() {
                   Complete privacy, no personal details required
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-xs">
@@ -419,7 +419,7 @@ export default function LandingPage() {
             {/* Identified Card - Enhanced */}
             <Card className="relative overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-bl-full" />
-              
+
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
@@ -434,7 +434,7 @@ export default function LandingPage() {
                   Faster resolution with direct communication
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-xs">

@@ -410,7 +410,7 @@ npm run test:gemini "My professor never shows up to lectures"
 
 **Check response headers** (cURL):
 ```bash
-curl -X POST http://localhost:5000/api/complaints \
+curl -X POST https://campusvoice-backend-bpit.onrender.com/api/complaints \
   -H "Content-Type: application/json" \
   -d '{
     "category": "hostel",
